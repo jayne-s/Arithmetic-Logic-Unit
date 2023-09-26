@@ -18,7 +18,7 @@ endmodule
 module main;
 reg [3:0] a,b;
 wire [3:0] o;
-bitOR a1(a,b,o);
+bitOR o1(a,b,o);
   initial 
     begin
       $monitor("At time %t, a=%d b=%d  \n  o[3]=%d o[2]=%d o[1]=%d o[0]=%d", $time, a, b, o[3],o[2],o[1],o[0]);
