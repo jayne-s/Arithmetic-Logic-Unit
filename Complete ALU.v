@@ -144,10 +144,32 @@ mux8to1_4bit m1(f2,f1,f0,fBit,s7,s6,s5,n,o,an,su,su);
 
   initial 
     begin
-    $monitor("s7=%d s6=%d s5=%d s4=%d s3=%d s2=%d s1=%d s0=%d \n f2=%d f1=%d f0=%d \n fBit=%d C=%d Z=%d N=%d", s7,s6,s5,n,o,an,su,su,f2,f1,f0,fBit,cout,out,fBit[3]);
+    $monitor("Test %t s7=%d s6=%d s5=%d s4=%d s3=%d s2=%d s1=%d s0=%d \n f2=%d f1=%d f0=%d \n fBit=%d C=%d Z=%d N=%d \n", $time,s7,s6,s5,n,o,an,su,su,f2,f1,f0,fBit,cout,out,fBit[3]);
+     a=6;b=4;
+     f2=0;f1=0;f0=0;
+     #1
+     a=7;b=9;
+     f2=0;f1=0;f0=0;
+     #1
+     a=10;b=4;
+     f2=0;f1=0;f0=1;
+     #1
+     a=7;b=5;
+     f2=0;f1=0;f0=1;
+     #1
      a=6;b=4;
      f2=0;f1=1;f0=0;
      #1
+     a=7;b=13;
+     f2=0;f1=1;f0=0;
+     #1
+     a=10;b=4;
      f2=0;f1=1;f0=1;
+     #1
+     a=7;b=4;
+     f2=0;f1=1;f0=1;
+     #1
+     a=7;b=4;
+     f2=1;f1=0;f0=0;
     end
 endmodule
